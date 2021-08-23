@@ -1,0 +1,58 @@
+/* pages/payment/index.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60rpx 0;
+}
+
+.price-box .unit {
+  font-size: 48rpx;
+  margin-bottom: 6rpx;
+  color: #333333;
+}
+
+.price-box .price {
+  font-size: 75rpx;
+  color: #333333;
+}
+
+.product {
+  width: 510rpx;
+}
+
+.name {
+  padding: 40rpx 0 60rpx;
+  border-bottom: 1rpx solid #eee;
+  font-size: 32rpx;
+  color: #333333;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.info {
+  padding: 60rpx 0 240rpx;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  letter-spacing: 0;
+}
+
+.info-item view:nth-child(1) {
+  color: #666666;
+}
+
+.info-item view:nth-child(2) {
+  color: #333333;
+}
+
+.buy-button {
+  width: 670rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  font-size: 36rpx;
+}

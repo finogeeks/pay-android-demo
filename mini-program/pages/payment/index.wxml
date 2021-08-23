@@ -1,0 +1,34 @@
+<!--pages/payment/index.wxml-->
+<view class="container">
+  <view class="price-box">
+    <view class="unit">￥</view>
+    <view class="price">0.01</view>
+  </view>
+
+  <view class="product">
+    <view class="name">FinClip 品控⼿册</view>
+    <view class="info">
+      <view class="info-item">
+        <view>用户：</view>
+        <view>13816488088</view>
+      </view>
+      <view class="info-item">
+        <view>支付方式：</view>
+        <view>微信支付</view>
+      </view>
+      <view class="info-item">
+        <view>时间：</view>
+        <view>{{current}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="buy-button"
+        bindtap="payment">
+    确认支付
+  </view>
+</view>
+
+<confirm visible="{{visible}}"
+         text="{{text}}"
+         confirm-text="确认"
+         bind:confirm="close" />

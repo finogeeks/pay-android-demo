@@ -1,0 +1,28 @@
+<!--pages/user/index.wxml-->
+
+<view class="container">
+  <view class="user">
+    <view class="avatar">
+      <image src="../../assets/mine_avatar.png"></image>
+    </view>
+    <view class="name">{{isLogin ? (profileData.nickName || '测试用户') : '未登录'}}</view>
+  </view>
+  <view wx:if="{{!isLogin}}"
+        class="button"
+        bindtap="showConfirm">
+    APP 授权登录
+  </view>
+  <view wx:else
+        class="button"
+        bindtap="logout">
+    退出登录
+  </view>
+</view>
+
+
+<confirm visible="{{visible}}"
+         text="小程序申请获取你的账号信息进行登录，是否允许？"
+         cancel-text="取消"
+         confirm-text="允许"
+         bind:confirm="handleLogin"
+         bind:cancel="hideConfirm" />

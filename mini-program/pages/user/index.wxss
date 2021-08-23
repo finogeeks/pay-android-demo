@@ -1,0 +1,42 @@
+/* pages/user/index.wxss */
+.container {
+  background-color: #f5f6f6;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  height: 220rpx;
+  padding: 30rpx 30rpx 30rpx 50rpx;
+  margin: 24rpx;
+  border-radius: 16rpx;
+  background-color: #fff;
+}
+
+.user .avatar {
+  width: 76rpx;
+  height: 76rpx;
+  margin-right: 32rpx;
+}
+
+.user .avatar image {
+  width: 100%;
+  height: 100%;
+}
+
+.user .name {
+  font-size: 34rpx;
+  color: #030D1E;
+  letter-spacing: 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 26rpx;
+  margin: 24rpx;
+  color: #FF561D;
+  border-radius: 16rpx;
+  background-color: #fff;
+}

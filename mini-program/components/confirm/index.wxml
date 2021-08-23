@@ -1,0 +1,11 @@
+<!--components/confirm/index.wxml-->
+
+<view wx:if="{{visible}}" class="mask">
+  <view class="main">
+    <view class="content">{{text}}</view>
+    <view class="button-group">
+      <view wx:if="{{cancelText}}" class="button cancel" bindtap="onCancel">{{cancelText}}</view>
+      <view wx:if="{{confirmText}}" class="button confirm" bindtap="onConfirm">{{confirmText}}</view>
+    </view>
+  </view>
+</view>

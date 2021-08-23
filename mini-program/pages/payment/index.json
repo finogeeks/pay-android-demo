@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "confirm": "../../components/confirm/index"
+  },
+  "navigationBarTitleText": "支付订单"
+}

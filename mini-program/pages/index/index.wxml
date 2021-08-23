@@ -1,0 +1,28 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view class="banner">
+    <image src="../../assets/book_pic.png"
+           mode="widthFix"></image>
+  </view>
+
+  <view class="content">
+    <view class="title">FinClip 品控⼿册</view>
+    <view class="desc">
+      本次 《FinClip 品控⼿册》经历过数次内容改版，产品、运营同学在实际⼯作中的相关经验汇总⽽成，本⼿册共计包括约 53000 余字，是一本快速了解 FinClip 产品设计理解的方法论手册。</view>
+    <view class="desc"></view>
+    <view class="desc">*此商品仅用于展示FinClip小程序接入支付的能力。</view>
+    <view class="desc">*支付成功后将通过短信提供文档的下载链接。</view>
+
+    <view class="footer">
+      <view class="price-box">
+        <view class="unit">￥</view>
+        <view class="price">0.01</view>
+      </view>
+      <view class="buy-button"
+            bindtap="toPayment">
+        立即购买
+      </view>
+    </view>
+  </view>
+</view>

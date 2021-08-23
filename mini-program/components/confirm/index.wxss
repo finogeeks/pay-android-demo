@@ -1,0 +1,55 @@
+/* components/comfirm/index.wxss */
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 540rpx;
+  border: 1rpx solid #666;
+  border-radius: 28rpx;
+  background-color: #fff;
+}
+
+.content {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 194rpx;
+  padding: 0 32rpx;
+  font-size: 34rpx;
+  color: #000000;
+}
+
+.button-group {
+  flex: 0 0 auto;
+  display: flex;
+  border-top: 1rpx solid rgba(0,0,80,0.05);
+}
+
+.button-group .button {
+  flex: 1 1 auto;
+  width: 50%;
+  height: 86rpx;
+  line-height: 86rpx;
+  text-align: center;
+  color: #007AFF;
+}
+
+
+.button + .button {
+  border-left: 1rpx solid rgba(0,0,80,0.05);
+}

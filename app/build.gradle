@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.finogeeks.finclip.pay.demo"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'demo'
+            keyPassword '123321'
+            storeFile file('../finclip_demo.jks')
+            storePassword '123321'
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    packagingOptions {
+        // libsdkcore.so和libfin-yuvutil是被加固过的，不能被压缩，否则加载动态库时会报错
+        doNotStrip "*/x86/libsdkcore.so"
+        doNotStrip "*/x86_64/libsdkcore.so"
+        doNotStrip "*/armeabi/libsdkcore.so"
+        doNotStrip "*/armeabi-v7a/libsdkcore.so"
+        doNotStrip "*/arm64-v8a/libsdkcore.so"
+
+        doNotStrip "*/x86/libfin-yuvutil.so"
+        doNotStrip "*/x86_64/libfin-yuvutil.so"
+        doNotStrip "*/armeabi/libfin-yuvutil.so"
+        doNotStrip "*/armeabi-v7a/libfin-yuvutil.so"
+        doNotStrip "*/arm64-v8a/libfin-yuvutil.so"
+    }
+}
+
+dependencies {
+    implementation 'com.finogeeks.lib:finapplet:2.33.3' // 凡泰小程序SDK
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.9' // 微信OpenSDK
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0' // 请求下单接口需要
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // 请求下单接口需要
+}
